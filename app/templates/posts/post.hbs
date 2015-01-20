@@ -1,0 +1,10 @@
+<h3>{{model.title}}</h3>
+<p>{{model.author.name}}</p>
+<p>{{model.date}}</p>
+{{#if isEditing}}
+	{{textarea value=model.body cols="80" rows="8"}}
+	<button {{action "save"}}>Save</button>
+{{else}}
+	<button {{action "edit"}}>Edit</button>
+	<p>{{model.body}}</p>
+{{/if}}

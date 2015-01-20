@@ -1,0 +1,11 @@
+<h2>Posts</h2>
+
+{{#each post in model}}
+	<p>
+		{{link-to post.title "posts.post" post}}
+		<br>
+		{{post.excerpt}}
+	</p>
+{{/each}}
+
+{{outlet}}
